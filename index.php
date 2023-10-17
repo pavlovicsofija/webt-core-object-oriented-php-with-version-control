@@ -44,7 +44,7 @@ class YouTubeVideo extends Video
     }
 
     public function getEmbedCode(): string {
-        return '<iframe width="560" height="315" src="https://www.youtube.com/embed/' . $this->videoId . '"></iframe>';
+        return '<iframe width="500" height="300" src="https://www.youtube.com/embed/' . $this->videoId . '"></iframe>';
     }
 
 }
@@ -60,23 +60,26 @@ class VimeoVideo extends Video
     }
 
     public function getEmbedCode(): string {
-        return '<iframe width="560" height="315" src="https://player.vimeo.com/video/' . $this->videoId . '"></iframe>';
+        return '<iframe width="500" height="300" src="https://player.vimeo.com/video/' . $this->videoId . '"></iframe>';
     }
 
 }
-$video = new VimeoVideo("keine Ahnung", "547868060");
 
-echo "Video Title: " . $video->getName() . "<br>";
-echo "Video Source: " . $video->getSource() . "<br>";
 
-echo "Video Embed Code: <br>";
-echo $video->getEmbedCode();
+$Yvideo = new YouTubeVideo("dog", "DzpmhfiBCO8");
 
-$video = new YouTubeVideo("dog", "DzpmhfiBCO8");
+$Vvideo = new VimeoVideo("keine Ahnung", "547868060");
 
-echo "Video Title: " . $video->getName() . "<br>";
-echo "Video Source: " . $video->getSource() . "<br>";
+echo $Yvideo->getEmbedCode();
+echo $Yvideo->getEmbedCode();
+echo $Yvideo->getEmbedCode();
+echo $Yvideo->getEmbedCode();
+echo $Yvideo->getEmbedCode();
 
-echo "Video Embed Code: <br>";
-echo $video->getEmbedCode();
+echo '<br>';
 
+echo $Vvideo->getEmbedCode();
+echo $Vvideo->getEmbedCode();
+echo $Vvideo->getEmbedCode();
+echo $Vvideo->getEmbedCode();
+echo $Vvideo->getEmbedCode();
