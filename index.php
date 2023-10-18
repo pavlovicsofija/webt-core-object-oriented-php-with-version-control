@@ -67,16 +67,19 @@ class VimeoVideo extends Video
 
 
 $Yvideo = new YouTubeVideo("dog", "DzpmhfiBCO8");
+
 $Vvideo = new VimeoVideo("keine Ahnung", "547868060");
 
-// Wiederholungen reduzieren
-for ($i = 0; $i < 5; $i++) {
-    echo $Yvideo->getEmbedCode();
-}
+echo $Yvideo->getEmbedCode();
+echo $Yvideo->getEmbedCode();
+echo $Yvideo->getEmbedCode();
+echo $Yvideo->getEmbedCode();
+echo $Yvideo->getEmbedCode();
 
 echo '<br>';
 
-for ($i = 0; $i < 5; $i++) {
-    echo $Vvideo->getEmbedCode();
-}
-
+echo $Vvideo->getEmbedCode();
+echo $Vvideo->getEmbedCode();
+echo $Vvideo->getEmbedCode();
+echo $Vvideo->getEmbedCode();
+echo $Vvideo->getEmbedCode();
