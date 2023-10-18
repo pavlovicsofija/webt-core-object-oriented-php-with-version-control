@@ -9,15 +9,18 @@ abstract class Video implements VideoInterface{
     private $name;
     private $source;
 
+    protected $videoId;
+
     /**
      * @param $name
      * @param $source
      * @param $code
      */
-    public function __construct($name, $source)
+    public function __construct($name, $source, $videoId)
     {
         $this->name = $name;
         $this->source = $source;
+        $this->videoId = $videoId;
     }
 
     public function getName(): string
@@ -35,12 +38,12 @@ abstract class Video implements VideoInterface{
 
 class YouTubeVideo extends Video
 {
-    private $videoId;
+
 
     public function __construct($name, $videoId)
     {
-        parent::__construct($name, "YouTube");
-        $this->videoId = $videoId;
+        parent::__construct($name, "YouTube", $videoId);
+
     }
 
     public function getEmbedCode(): string {
@@ -51,12 +54,10 @@ class YouTubeVideo extends Video
 
 class VimeoVideo extends Video
 {
-    private $videoId;
 
     public function __construct($name, $videoId)
     {
-        parent::__construct($name, "Vimeo");
-        $this->videoId = $videoId;
+        parent::__construct($name, "Vimeo", $videoId);
     }
 
     public function getEmbedCode(): string {
