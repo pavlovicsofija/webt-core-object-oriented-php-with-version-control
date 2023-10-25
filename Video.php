@@ -14,6 +14,7 @@ abstract class Video implements VideoInterface{
         $this->source = $source;
     }
 
+    //Methoden implementieren
     public function getName(): string
     {
         return $this->name;
@@ -24,5 +25,6 @@ abstract class Video implements VideoInterface{
         return $this->source;
     }
 
+    //abstrakte Methode deklarieren
     abstract public function getEmbedCode(): string;
 }
